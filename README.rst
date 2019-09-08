@@ -47,7 +47,7 @@ In the TOML file, you can create a case-sensitive and/or case-insensitive list o
    sensitive = ["reStructuredText", "Metaclass", "Jupyter"]
    insensitive = ["interactively"]
 
-Here is the `configuration <https://github.com/jwkvam/spellrst/spellrst.toml>`__ for this project.
+Here is the `configuration <https://github.com/jwkvam/spellrst/blob/master/spellrst.toml>`__ for this project.
 
 .. |Build Status| image:: https://travis-ci.org/jwkvam/spellrst.svg?branch=master
    :target: https://travis-ci.org/jwkvam/spellrst
