@@ -95,7 +95,7 @@ def main(files, dictionary, config):
     for file in files:
         document = new_document(file, settings)
         try:
-        parser.parse(open(file, 'r').read(), document)
+            parser.parse(open(file, 'r').read(), document)
         except FileNotFoundError:
             print(f"File not found '{file}'", file=sys.stderr)
             any_misspellings = True
