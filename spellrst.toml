@@ -1,4 +1,5 @@
 sensitive = [
 "spellrst",
-"reStructuredText"
+"reStructuredText",
+"TOML"
 ]

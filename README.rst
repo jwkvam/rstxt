@@ -40,9 +40,9 @@ For example, to check all rst files contained in a directory (fish)::
 Whitelist
 ---------
 
-To whitelist words, add them a toml file.
+To whitelist words, add them a TOML file.
 By default `spellrst` will read in `spellrst.toml` if it exists in the current working directory.
-In the toml file, you can create a case-sensitive and/or case-insensitive list of words::
+In the TOML file, you can create a case-sensitive and/or case-insensitive list of words::
 
    sensitive = ["reStructuredText", "Metaclass", "Jupyter"]
    insensitive = ["interactively"]
