@@ -1,0 +1,21 @@
+dist: bionic
+language: python
+cache:
+  pip: true
+python:
+  - "3.6"
+  - "3.7"
+
+install:
+  - pip install -r test-requirements.txt --progress-bar=off
+  - flit install -s
+  - python -m spacy download en_core_web_md
+
+script:
+  - black --check -S -l 100 -t py36 spellrst.py tests
+  - make test
+  # dogfood
+  - spellrst README.rst
+
+after_success:
+  - codecov
