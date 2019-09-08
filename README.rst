@@ -41,12 +41,13 @@ Whitelist
 ---------
 
 To whitelist words, add them a TOML file.
-By default `spellrst` will read in `spellrst.toml` if it exists in the current working directory.
+By default ``spellrst`` will read in ``spellrst.toml`` if it exists in the current working directory.
 In the TOML file, you can create a case-sensitive and/or case-insensitive list of words::
 
    sensitive = ["reStructuredText", "Metaclass", "Jupyter"]
    insensitive = ["interactively"]
 
+Here is the `configuration <https://github.com/jwkvam/spellrst/spellrst.toml>`__ for this project.
 
 .. |Build Status| image:: https://travis-ci.org/jwkvam/spellrst.svg?branch=master
    :target: https://travis-ci.org/jwkvam/spellrst
