@@ -39,10 +39,10 @@ class Misspell:
         """Setup whitelist."""
         try:
             options = toml.load(config)
-            self.sensitive = options.get('sensitive', [])
-            self.insensitive = options.get('insensitive', [])
         except FileNotFoundError:
-            pass
+            options = {}
+        self.sensitive = options.get('sensitive', [])
+        self.insensitive = options.get('insensitive', [])
 
     def is_misspelled(self, token):
         """Detect if token is misspelled."""
