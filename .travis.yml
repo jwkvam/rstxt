@@ -13,7 +13,6 @@ install:
   - flit install -s
 
 script:
-  - pytest
   - black --check -S -l 100 -t py36 spellrst.py tests
   - make test
 

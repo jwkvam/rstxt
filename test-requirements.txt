@@ -4,3 +4,5 @@ flit
 pylint
 pytest
 pytest-console-scripts
+pytest-cov
+pytest-pylint

@@ -38,13 +38,21 @@ class Misspell:
     def __init__(self, config):
         """Setup whitelist."""
         try:
-            self.config = toml.load(config)
+            options = toml.load(config)
+            self.sensitive = options.get('sensitive', [])
+            self.insensitive = options.get('insensitive', [])
         except FileNotFoundError:
             pass
 
     def is_misspelled(self, token):
         """Detect if token is misspelled."""
-        if token.like_url or token.like_num or token.like_email:
+        if (
+            token.like_url
+            or token.like_num
+            or token.like_email
+            or token.text in self.sensitive
+            or token.lower_ in self.insensitive
+        ):
             return False
         return token.is_oov
 
