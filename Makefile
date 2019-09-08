@@ -9,4 +9,4 @@ lint:
 	py.test --pylint -m pylint --pylint-rcfile=pylintrc --pylint-error-types=RCWEF
 
 black:
-	black -S -l 100 -t py36 **.py
+	black -S -l 100 -t py36 spellrst.py tests
