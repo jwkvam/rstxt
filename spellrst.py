@@ -51,6 +51,7 @@ class Misspell:
 
 DEFAULT_CONFIG = 'spellrst.toml'
 
+
 @click.command()
 @click.argument('files', nargs=-1)
 @click.option(

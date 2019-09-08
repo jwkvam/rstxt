@@ -1,0 +1,4 @@
+flit
+codecov
+pytest
+pylint

@@ -1,0 +1,21 @@
+dist: bionic
+language: python
+cache:
+  pip: true
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8-dev"
+  - "nightly"
+
+install:
+  - pip install -r test-requirements.txt --progress-bar=off
+  - flit install -s
+
+script:
+  - pytest
+  - black --check -S -l 100 -t py36 **/*.py
+  - make test
+
+after_success:
+  - codecov

@@ -14,7 +14,7 @@ description-file = "README.rst"
 requires = [
     "click",
     "docutils",
-    "spacy"
+    "spacy",
     "toml"
 ]
 requires-python = ">=3.6"
