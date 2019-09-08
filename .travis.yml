@@ -15,6 +15,8 @@ install:
 script:
   - black --check -S -l 100 -t py36 spellrst.py tests
   - make test
+  # dogfood
+  - spellrst README.rst
 
 after_success:
   - codecov
