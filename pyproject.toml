@@ -15,6 +15,7 @@ requires = [
     "click",
     "docutils",
     "spacy"
+    "toml"
 ]
 requires-python = ">=3.6"
 
