@@ -95,8 +95,8 @@ def main(files, dictionary, config):
     for file in files:
         document = new_document(file, settings)
         try:
-            parser.parse(open(file, 'r').read(), document)
-        except:
+        parser.parse(open(file, 'r').read(), document)
+        except FileNotFoundError:
             print(f"File not found '{file}'", file=sys.stderr)
             any_misspellings = True
             continue
@@ -125,4 +125,5 @@ def main(files, dictionary, config):
 
 
 if __name__ == '__main__':
+    # pylint: disable=no-value-for-parameter
     main()
