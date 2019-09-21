@@ -1,61 +1,50 @@
-========
-spellrst
-========
+=====
+rstxt
+=====
 
 |Build Status| |PyPI version| |PyPI| |codecov| |black|
 
-Spell check reStructuredText.
+Extract text from reStructuredText.
 
 Install
 -------
 
 Install with pip::
 
-   pip install spellrst
-
-And download the `spaCy model <https://spacy.io/models>`__ you want to use e.g. ``en_core_web_md``::
-
-   python -m spacy download en_core_web_md
+   pip install rstxt
 
 Usage
 -----
 
-After installing you can run ``spellrst`` from the command line::
+After installing you can run ``rstxt`` from the command line::
 
-   $ spellrst --help
-   Usage: spellrst [OPTIONS] [FILES]...
+   $ rstxt --help
+   Usage: rstxt [OPTIONS] [FILES]...
 
-     Spell check reStructuredText.
+     Extract text from reStructuredText.
 
    Options:
-     -d, --dictionary TEXT  spaCy language model (spacy.io/models), e.g.
-                            en_core_web_md
-     -c, --config TEXT      Configuration file for a whitelist e.g. spellrst.toml
      --help                 Show this message and exit.
 
-For example, to check all rst files contained in a directory (fish)::
+For example, to extract text from all rst files contained in a directory (fish shell)::
 
-   spellrst **.rst
+   rstxt **.rst
 
-Whitelist
----------
+Text can also be piped in::
 
-To whitelist words, add them a TOML file.
-By default ``spellrst`` will read in ``spellrst.toml`` if it exists in the current working directory.
-In the TOML file, you can create a case-sensitive and/or case-insensitive list of words::
+   cat README.rst | rstxt
 
-   sensitive = ["reStructuredText", "Metaclass", "Jupyter"]
-   insensitive = ["interactively"]
+Use this to spell check reStructuredText::
 
-Here is the `configuration <https://github.com/jwkvam/spellrst/blob/master/spellrst.toml>`__ for this project.
+   rstxt **.rst | hunspell -d en_US -l
 
-.. |Build Status| image:: https://travis-ci.org/jwkvam/spellrst.svg?branch=master
-   :target: https://travis-ci.org/jwkvam/spellrst
-.. |PyPI version| image:: https://badge.fury.io/py/spellrst.svg
-   :target: https://badge.fury.io/py/spellrst
-.. |PyPI| image:: https://img.shields.io/pypi/pyversions/spellrst.svg
-   :target: https://pypi.python.org/pypi/spellrst/
-.. |codecov| image:: https://codecov.io/gh/jwkvam/spellrst/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/jwkvam/spellrst
+.. |Build Status| image:: https://travis-ci.org/jwkvam/rstxt.svg?branch=master
+   :target: https://travis-ci.org/jwkvam/rstxt
+.. |PyPI version| image:: https://badge.fury.io/py/rstxt.svg
+   :target: https://badge.fury.io/py/rstxt
+.. |PyPI| image:: https://img.shields.io/pypi/pyversions/rstxt.svg
+   :target: https://pypi.python.org/pypi/rstxt/
+.. |codecov| image:: https://codecov.io/gh/jwkvam/rstxt/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/jwkvam/rstxt
 .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black

@@ -6,10 +6,10 @@ build-backend = "intreehooks:loader"
 build-backend = "flit.buildapi"
 
 [tool.flit.metadata]
-module = "spellrst"
+module = "rstxt"
 author = "Jacques Kvam"
 author-email = "jwkvam+pypi@gmail.com"
-home-page = "https://github.com/jwkvam/spellrst"
+home-page = "https://github.com/jwkvam/rstxt"
 description-file = "README.rst"
 classifiers = [
     "License :: OSI Approved :: MIT License",
@@ -19,11 +19,9 @@ classifiers = [
 ]
 requires = [
     "click",
-    "docutils",
-    "spacy",
-    "toml"
+    "docutils"
 ]
 requires-python = ">=3.6"
 
 [tool.flit.scripts]
-spellrst = "spellrst:main"
+rstxt = "rstxt:main"
