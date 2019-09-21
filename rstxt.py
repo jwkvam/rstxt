@@ -40,7 +40,7 @@ def has_stdin():
 @click.command()
 @click.argument('files', nargs=-1)
 def main(files):
-    """Spell check reStructuredText."""
+    """Extract reStructuredText text."""
     if not files:
         if not has_stdin():
             sys.exit(os.EX_OK)

@@ -12,10 +12,8 @@ install:
   - python -m spacy download en_core_web_md
 
 script:
-  - black --check -S -l 100 -t py36 spellrst.py tests
+  - black --check -S -l 100 -t py36 rstxt.py tests
   - make test
-  # dogfood
-  - spellrst README.rst
 
 after_success:
   - codecov
