@@ -26,13 +26,16 @@ After installing you can run ``rstxt`` from the command line::
    Options:
      --help                 Show this message and exit.
 
-For example, to extract text from all rst files contained in a directory (fish shell)::
+For example, to extract text from all reStructuredText files contained in a directory (fish shell)::
 
    rstxt **.rst
 
 Text can also be piped in::
 
    cat README.rst | rstxt
+
+Spell Checking
+~~~~~~~~~~~~~~
 
 Use this to spell check reStructuredText::
 
